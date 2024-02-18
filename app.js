@@ -32,19 +32,19 @@ app.use(express.json()) // Parses json, multi-part (file), url-encoded
 app.use(express.urlencoded({ extended:true, limit:'50mb' }));
 extendExpressMiddleware(app);
 app.use(passportJwtLogin);
-app.use('/api/', authMiddleware);
+app.use('/gariapi/', authMiddleware);
 
 //bind page route to the controllers
-app.use('/api/', HomeController);
-app.use('/api/auth', AuthController);
-app.use('/api/account', AccountController);
-app.use('/api/reviews', ReviewsController);
-app.use('/api/sacco', SaccoController);
-app.use('/api/users', UsersController);
-app.use('/api/vehices', VehicesController);
-app.use('/api/components_data', ComponentsDataController);
-app.use('/api/fileuploader', FileUploaderController);
-app.use('/api/s3uploader', S3UploaderController);
+app.use('/gariapi/', HomeController);
+app.use('/gariapi/auth', AuthController);
+app.use('/gariapi/account', AccountController);
+app.use('/gariapi/reviews', ReviewsController);
+app.use('/gariapi/sacco', SaccoController);
+app.use('/gariapi/users', UsersController);
+app.use('/gariapi/vehices', VehicesController);
+app.use('/gariapi/components_data', ComponentsDataController);
+app.use('/gariapi/fileuploader', FileUploaderController);
+app.use('/gariapi/s3uploader', S3UploaderController);
 app.get('*', function(req, res){
     res.status(404).json("Page not found");
 });

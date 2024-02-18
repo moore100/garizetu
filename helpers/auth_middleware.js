@@ -1,6 +1,6 @@
 import passport from 'passport';
 import passportLogin from './passport-auth.js';
-const publicPages = ['auth', 'components_data', 'fileuploader', 's3uploader', ];
+const publicPages = ['auth', 'components_data', 'fileuploader', 's3uploader', 'reviews','reviews/view','sacco','sacco/view','vehices','vehices/view'];
 async function passportJwtLogin (req, res, next) {
     passportLogin();
     passport.authenticate('jwt', async (err, user, info) => {

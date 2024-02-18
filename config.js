@@ -1,7 +1,7 @@
 export default {
 	app: {
 		name: "garizetu",
-		url: "http://localhost:8060",
+		url: "https://faindt.com/gariapi",
 		frontendUrl: "http://localhost:8050",
 		secret: "9a428c7d53baed68b1170859df20adb4",
 		language: "english",
@@ -14,11 +14,11 @@ export default {
 		otpDuration: 5, //in minutes
 	},
 	database: {
-		name:"garizetu",
+		name:"faindtco_garizetu",
 		type: "mysql",
 		host: "localhost",
-		username: "root",
-		password: "",
+		username: "faindtco_garizetu",
+		password: "wahomemutahi1@@",
 		port: "",
 		charset: "utf8",
 		recordlimit: 10,
